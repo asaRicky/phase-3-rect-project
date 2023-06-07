@@ -205,3 +205,7 @@
     transition: .3s;
     border: 1px solid #aa0481;
   }
+
+  .h1{
+    font-size: 40%;
+  }

@@ -4,7 +4,6 @@ import Search from "./Search";
 import Allmovies from "./Allmovies";
 
 function Dashboard() {
-
   const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
 
