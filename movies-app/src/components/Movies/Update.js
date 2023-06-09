@@ -14,7 +14,7 @@ function Update() {
   function handleUpdate(e) {
     e.preventDefault();
 
-    fetch(`https://data-j87g.onrender.com/movies/update/${params.id}`, {
+    fetch(`http://127.0.0.1:9292/movies/update/${params.id}`, {
       method: "PUT",
       body: JSON.stringify({
         title: mov_title,

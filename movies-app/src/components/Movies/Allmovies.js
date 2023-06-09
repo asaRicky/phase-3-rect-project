@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Allmovies({ movies, handleDeleteMovie }) {
   function handleDeleteClick(id) {
-    fetch(`https://data-j87g.onrender.com/movies/destroy/${id}`, {
+    fetch(`http://127.0.0.1:9292/movies/destroy/${id}`, {
       method: "DELETE",
     });
 
@@ -16,11 +16,15 @@ function Allmovies({ movies, handleDeleteMovie }) {
         <div key={movie.id} className="card">
           <h1>{movie.title}</h1>
           <p>{movie.description}</p>
-          <img
-            className="card-img-top"
-            src={movie.movie_url}
-            alt={movie.movie_url}
-          ></img>
+          <iframe width="420" className="card-img-top" src={`${movie.movie_url}`}  title={movie.movie_url}
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowFullScreen
+          />
+         
+         {/* <img className="card-img-top" src={movie.movie_url} alt={movie.movie_url}></img> */}
+
+
+          {console.log(movie.movie_url)}
           <h2>{movie.year}</h2>
           {movie.originally_fetched === false && (
             <button onClick={() => handleDeleteClick}>

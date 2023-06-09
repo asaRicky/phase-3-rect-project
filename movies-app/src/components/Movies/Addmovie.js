@@ -13,7 +13,7 @@ const [mov_url, SetMov_url] = useState("")
 function handleAdd(e) {
     e.preventDefault()
 
-fetch('https://data-j87g.onrender.com/create', {
+fetch('http://127.0.0.1:9292/create', {
 method: 'POST',
 body: JSON.stringify({
     title: mov_title,

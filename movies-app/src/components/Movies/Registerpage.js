@@ -11,7 +11,7 @@ function Registerpage() {
     function handleAdd(e) {
         e.preventDefault()
 
-    fetch('https://data-j87g.onrender.com/auth/register', {
+    fetch('http://127.0.0.1:9292/auth/register', {
     method: 'POST',
     body: JSON.stringify({
         name: first,
